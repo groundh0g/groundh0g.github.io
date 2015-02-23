@@ -46,6 +46,10 @@ Usage:
     </div>
   {% endfor %}
 
+  {% if posts_list == nil or posts_list.size == 0 %}
+    <img src="{{ BASE_PATH }}/assets/img/iconBlog@2x.png" />
+  {% endif %}
+
   {% assign posts_list = nil %}
   {% assign posts_limit = 20 %}
   {% assign posts_category = nil %}
