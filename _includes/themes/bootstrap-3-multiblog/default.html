@@ -86,9 +86,9 @@
         <div class="collapse navbar-collapse" id="jb-navbar-collapse">
           <ul class="nav navbar-nav">
 		    {% if multiblog_members.size == 1 %}
-			  <li><a href="{{ site.blogs[multiblog_members.first].home_page }}">Home</a></li>
-			  <li><a href="{{ BASE_PATH }}{{ site.blogs[multiblog_members.first].archive_path }}">Archive</a></li>
-			  <li><a href="{{ BASE_PATH }}{{ site.blogs[multiblog_members.first].tags_path }}">Tags</a></li>
+			  <li class="{{ page.nav_home_class }}"><a href="{{ site.blogs[multiblog_members.first].home_page }}">Home</a></li>
+			  <li class="{{ page.nav_archive_class }}"><a href="{{ BASE_PATH }}{{ site.blogs[multiblog_members.first].archive_path }}">Archive</a></li>
+			  <li class="{{ page.nav_tags_class }}"><a href="{{ BASE_PATH }}{{ site.blogs[multiblog_members.first].tags_path }}">Tags</a></li>
 		    {% else %}
 			  <li><a href="{{ HOME_PATH }}">Home</a></li>
 			  <li><a href="{{ BASE_PATH }}{{site.JB.archive_path}}">Archive</a></li>

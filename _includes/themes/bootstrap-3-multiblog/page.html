@@ -1,5 +1,10 @@
+{% include JB/is_multiblog %}
+
 <div class="page-header">
-  <h1>{{ page.title }} {% if page.tagline %} <small>{{ page.tagline }}</small>{% endif %}</h1>
+  <h1>{{ page.title }} 
+  {% if page.tagline %}<br/><small>{{ page.tagline }}</small>
+  {% elsif multiblog_members.size == 1 %}<br/><small>{{ site.blogs[multiblog_members.first].title }}</small>{% endif %}
+  </h1>
 </div>
 
 <div class="row">

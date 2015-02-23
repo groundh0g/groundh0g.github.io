@@ -2,7 +2,7 @@
 layout: page
 title : Archive
 header : Post Archive
-categories: [AllSites]
+categories: [Fauxcabulary]
 group: navigation_old
 nav_home_class: ""
 nav_archive_class: "active"
@@ -10,5 +10,5 @@ nav_tags_class: ""
 ---
 {% include JB/setup %}
 
-{% assign posts_collate = site.posts %}
+{% assign posts_collate = site.categories.fauxcabulary %}
 {% include JB/posts_collate %}
