@@ -1,0 +1,12 @@
+---
+layout: default
+title: Hello World!
+tagline: Supporting tagline
+categories: [Consigninator]
+---
+{% include JB/setup %}
+
+{% assign posts_list = site.categories.consigninator %}
+{% assign posts_category = "Consigninator" %}
+{% include JB/posts_summary-multiblog %}
+

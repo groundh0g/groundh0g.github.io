@@ -1,0 +1,51 @@
+{% comment %}<!--
+Collate_posts helper. Collated posts by year and month.
+Usage:
+  1) assign the 'posts_list' variable to a valid array of posts.
+  2) include JB/posts_summary-multiblog
+
+  example 1, all posts:
+    {% assign posts_list = site.posts %}
+    {% assign posts_limit = 25 %}
+    {% include JB/posts_summary-multiblog %}
+
+  example 2:
+    {% assign posts_list = site.categories.codecamps %}
+    {% assign posts_limit = 10 %}
+    {% assign posts_category = "Code Camps" %}
+    {% include JB/posts_summary-multiblog %}
+
+  Ordering:
+    Posts are displayed in reverse chronological order.
+-->{% endcomment %}
+
+  {% unless posts_limit %}
+    {% assign posts_limit = 20 %}
+  {% endunless %}
+  
+  <p>Showing the most recent {{ posts_limit }} posts{% if posts_category %} in category '{{posts_category}}'{% endif %}.</p>
+
+  {% for post in posts_list limit: posts_limit %}
+    <h2>{{ post.title }}<br/><small>{{ post.date | date: "%B %e, %Y" }}</small></h2>
+    <div style="margin-left:20px;">
+  {% if multiblog_members.size == 1 %}
+  	{% assign categories_list = othercats_members %}
+  {% else %}
+  	{% assign categories_list = post.categories %}
+  {% endif %}
+
+  {% if categories_list and categories_list != empty %}
+    <ul class="tag_box inline">
+      <li><i class="glyphicon glyphicon-open"></i></li>
+      {% include JB/categories_list %}
+    </ul>
+  {% endif %}
+
+      {{ post.content | strip_html | truncatewords:75}}
+      <p><strong>&raquo; <a href="{{ BASE_PATH }}{{ post.url }}">Show full post ...</a></strong></p>
+    </div>
+  {% endfor %}
+
+  {% assign posts_list = nil %}
+  {% assign posts_limit = 20 %}
+  {% assign posts_category = nil %}

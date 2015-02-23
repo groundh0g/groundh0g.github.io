@@ -1,0 +1,12 @@
+---
+layout: default
+title: Hello World!
+tagline: Supporting tagline
+categories: [GirlsAtPlay]
+---
+{% include JB/setup %}
+
+{% assign posts_list = site.categories.girlsatplay %}
+{% assign posts_category = "Girls at Play" %}
+{% include JB/posts_summary-multiblog %}
+

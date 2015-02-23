@@ -1,0 +1,12 @@
+---
+layout: default
+title: Hello World!
+tagline: Supporting tagline
+categories: [Codetopia]
+---
+{% include JB/setup %}
+
+{% assign posts_list = site.categories.codetopia %}
+{% assign posts_category = "Codetopia, LLC" %}
+{% include JB/posts_summary-multiblog %}
+

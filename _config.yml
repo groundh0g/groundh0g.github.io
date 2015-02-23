@@ -8,14 +8,183 @@ highlighter: pygments
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
-title : Jekyll Bootstrap
-tagline: Site Tagline
+
+blogCategories: ["CodeCamps", "Codetopia", "Consigninator", "Fauxcabulary", "Flockkeeper", "GirlsAtPlay", "GrowYourKnow", "MoreOnCode", "AllSites"]
+excerpt_separator: ""
+
+title : More on Code
+tagline: var e = able; // TODO - it right
 author :
-  name : Name Lastname
-  email : blah@email.test
-  github : username
-  twitter : username
+  name : Joseph Hall
+  email : hello@moreoncode.com
+  github : groundh0g
+  twitter : groundh0g
   feedburner : feedname
+
+blogs: 
+    CodeCamps:
+        title : Code Camps
+        tagline: Game programming for teens.
+        category: CodeCamps
+        commentsappid: 123
+        analyticsid: 'UA-123-12'
+        home_page: http://camps.moreoncode.com
+        archive_path: /archive.codecamps.html
+        categories_path : /categories.html
+        tags_path : /tags.codecamps.html
+        atom_path : /atom.codecamps.xml
+        rss_path : /rss.codecamps.xml
+        author :
+          name : Codetopia, LLC
+          email : codecamps@moreoncode.com
+          github : CodeCamps
+          twitter : moreoncode
+          feedburner : feedname
+    Codetopia:
+        title : Codetopia, LLC
+        tagline: Software Development Services
+        category: Codetopia
+        commentsappid: 123
+        analyticsid: 'UA-123-12'
+        home_page: http://www.codetopia.com
+        archive_path: /archive.codetopia.html
+        categories_path : /categories.html
+        tags_path : /tags.codetopia.html
+        atom_path : /atom.codetopia.xml
+        rss_path : /rss.codetopia.xml
+        author :
+          name : Codetopia, LLC
+          email : hello@codetopia.com
+          github : CodetopiaLLC
+          twitter : codetopia
+          feedburner : feedname
+    Consigninator:
+        title : Consigninator
+        tagline: Management Software for Consignments
+        category: Consigninator
+        commentsappid: 123
+        analyticsid: 'UA-123-12'
+        home_page: http://www.consigninator.com
+        archive_path: /archive.consigninator.html
+        categories_path : /categories.html
+        tags_path : /tags.consigninator.html
+        atom_path : /atom.consigninator.xml
+        rss_path : /rss.consigninator.xml
+        author :
+          name : Codetopia, LLC
+          email : hello@consigninator.com
+          github : Consigninator
+          twitter : consigninator
+          feedburner : feedname
+    Fauxcabulary:
+        title : Faucabulary.org
+        tagline: Fake definitions. Real funny.
+        category: Fauxcabulary
+        commentsappid: 123
+        analyticsid: 'UA-123-12'
+        home_page: http://www.fauxcabulary.org
+        archive_path: /archive.fauxcabulary.html
+        categories_path : /categories.html
+        tags_path : /tags.fauxcabulary.html
+        atom_path : /atom.fauxcabulary.xml
+        rss_path : /rss.fauxcabulary.xml
+        author :
+          name : Joseph Hall
+          email : hello@fauxcabulary.org
+          github : groundh0g
+          twitter : groundh0g
+          feedburner : feedname
+    Flockkeeper:
+        title : Flockkeeper
+        tagline: Management Software for Non-Profits
+        category: Flockkeeper
+        commentsappid: 123
+        analyticsid: 'UA-123-12'
+        home_page: http://www.flockkeeper.com
+        archive_path: /archive.flockkeeper.html
+        categories_path : /categories.html
+        tags_path : /tags.flockkeeper.html
+        atom_path : /atom.flockkeeper.xml
+        rss_path : /rss.flockkeeper.xml
+        author :
+          name : Codetopia, LLC
+          email : hello@flockkeeper.com
+          github : FlockKeeper
+          twitter : flockkeeper
+          feedburner : feedname
+    GirlsAtPlay:
+        title : Girls at Play
+        tagline: Projects from a dad and his three girls.
+        category: GirlsAtPlay
+        commentsappid: 123
+        analyticsid: 'UA-123-12'
+        home_page: http://www.girlsatplay.com
+        archive_path: /archive.girlsatplay.html
+        categories_path : /categories.html
+        tags_path : /tags.girlsatplay.html
+        atom_path : /atom.girlsatplay.xml
+        rss_path : /rss.girlsatplay.xml
+        author :
+          name : Girls at Play
+          email : hello@girlsatplay.com
+          github : GirlsAtPlay
+          twitter : girlzatplay
+          feedburner : feedname
+    GrowYourKnow:
+        title : GrowYourKnow
+        tagline: Projects from a dad and his three girls.
+        category: GrowYourKnow
+        commentsappid: 123
+        analyticsid: 'UA-123-12'
+        home_page: http://www.growyourknow.com
+        archive_path: /archive.growyourknow.html
+        categories_path : /categories.html
+        tags_path : /tags.growyourknow.html
+        atom_path : /atom.growyourknow.xml
+        rss_path : /rss.growyourknow.xml
+        author :
+          name : GrowYourKnow
+          email : hello@growyourknow.com
+          github : GrowYourKnow
+          twitter : growyourknow
+          feedburner : feedname
+    MoreOnCode:
+        title : More on Code
+        tagline: var e = able; // TODO - it right
+        category: MoreOnCode
+        commentsappid: 123
+        analyticsid: 'UA-123-12'
+        home_page: http://www.moreoncode.com
+        archive_path: /archive.moreoncode.html
+        categories_path : /categories.html
+        tags_path : /tags.growyourknow.html
+        atom_path : /atom.moreoncode.xml
+        rss_path : /rss.moreoncode.xml
+        author :
+          name : Joseph Hall
+          email : hello@moreoncode.com
+          github : MoreOnCode
+          twitter : moreoncode
+          feedburner : feedname
+    AllSites:
+        title : All Sites
+        tagline: Welcome to the Freak Show
+        category: AllSites
+        commentsappid: 123
+        analyticsid: 'UA-123-12'
+        home_page: http://blogs.moreoncode.com
+        archive_path: /archive.html
+        categories_path : /categories.html
+        tags_path : /tags.html
+        atom_path : /atom.xml
+        rss_path : /rss.xml
+        author :
+          name : Joseph Hall
+          email : hello@codetopia.com
+          github : groundh0g
+          twitter : groundh0g
+          feedburner : feedname
+    
 
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt 
@@ -25,7 +194,7 @@ author :
 # Else if you are pushing to username.github.io, replace with your username.
 # Finally if you are pushing to a GitHub project page, include the project name at the end.
 #
-production_url : http://username.github.io
+production_url : http://groundh0g.github.io
 
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #

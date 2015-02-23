@@ -1,0 +1,19 @@
+{% assign multiblog_members_string = "" %}
+{% assign othercats_members_string = "" %}
+
+{% for page_category in page.categories %}
+  {% if site.blogCategories contains page_category %}
+  	{% if multiblog_members_string.size > 0 %}
+      {% assign multiblog_members_string = multiblog_members_string | append: "/" %}
+  	{% endif %}
+    {% assign multiblog_members_string = multiblog_members_string | append: page_category %}
+  {% else %}
+  	{% if othercats_members_string.size > 0 %}
+      {% assign othercats_members_string = othercats_members_string | append: "/" %}
+  	{% endif %}
+    {% assign othercats_members_string = othercats_members_string | append: page_category %}
+  {% endif %}
+{% endfor %}
+
+{% assign multiblog_members = multiblog_members_string | split: "/" %}
+{% assign othercats_members = othercats_members_string | split: "/" %}

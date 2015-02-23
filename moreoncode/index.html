@@ -1,0 +1,12 @@
+---
+layout: default
+title: Hello World!
+tagline: Supporting tagline
+categories: [MoreOnCode]
+---
+{% include JB/setup %}
+
+{% assign posts_list = site.categories.moreoncode %}
+{% assign posts_category = "More on Code" %}
+{% include JB/posts_summary-multiblog %}
+
