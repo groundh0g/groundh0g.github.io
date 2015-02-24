@@ -19,23 +19,23 @@ It's insanely frustrating to be editing a tweet or comment and have the browser 
 
 No biggie. I can just remap those key combos in the Chrome OS settings, right? Wrong. The keyboard settings allow you to remap a whopping three (predefined) keys. Which, by the way, I suggest you use to remap that lame search button to `CAPSLOCK`.
 
-![Chromebook keyboard settings](https://lh5.googleusercontent.com/t99MlHrn8qZ_BdloKKM58ITPJmsfdYw5thBtIo9fTq4=s0 "Chromebook keyboard settings")
+<img src="https://lh5.googleusercontent.com/t99MlHrn8qZ_BdloKKM58ITPJmsfdYw5thBtIo9fTq4=s0" width="90%" />
 
 Luckily, one of the fine folks at Google wrote a Chrome extension to remap almost all the preset key mappings. It's called, "Shortcut Manager". It's available as a free install from the [Chrome Web Store](https://chrome.google.com/webstore/detail/shortcut-manager/mgjjeipcdnnjhgodgjpfkffcejoljijf).
 
-![Chrome Web Store](https://lh6.googleusercontent.com/3i7a9FnQHpdYwSoxkT0S4Oh4q8zqrdoLyyMcNq2EO5M=s0 "Chrome Web Store")
+<img src="https://lh6.googleusercontent.com/3i7a9FnQHpdYwSoxkT0S4Oh4q8zqrdoLyyMcNq2EO5M=s0" width="90%" />
 
 The extension allows you to map key combos to browser actions or custom JavaScript logic. We'll use it for the latter. Add the extension, and then click the icon in the toolbar to open the settings dialog.
 
-![Shortcut Manager settings](https://lh3.googleusercontent.com/7H72x0oQ0NR0POg3dz685I6EwaqKRmoXhiOwX3FLyx4=s0 "Shortcut Manager settings")
+<img src="https://lh3.googleusercontent.com/7H72x0oQ0NR0POg3dz685I6EwaqKRmoXhiOwX3FLyx4=s0" width="90%" />
 
 Shortcut Manager allows you to configure keyboard mappings on a page-by-page basis using the "URL patterns" setting. That's handy, but we want to apply our changes to all pages, so we'll leave the default value (`"*"`) as is.
 
 Click to focus the cursor on the "Shortcut key" field, and then press `Alt+Left`. Change the "Action" setting to "Execute javascript", and then enter the following logic in the second text field.
 
-```JavaScript
+{% highlight javascript %}
 javascript:void();
-```
+{% endhighlight %}
 
 That single statement tells the browser to do nothing. Which is just what we want to happen when we accidentally press the offending key combo.
 

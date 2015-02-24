@@ -15,7 +15,7 @@ If you compare the `LastSeenOn` column with a specific date, the comparison will
 
 With SQL Server 2008, it's easy to compare a pure date value (or a pure time value, although that’s typically not very useful). Just cast the `DATETIME` value to a `DATE`.
 
-```
+{% highlight sql %}
 -- initialize example data
 DECLARE @DateValue datetime
 SET @DateValue = CAST(rand() * 45678 AS datetime)
@@ -29,7 +29,7 @@ For versions of SQL Server prior to 2008, several tricks are commonly used to tr
 -- the SQL 2005 / SQL 2000 query
 SELECT @DateValue AS DateAndTime,
 DATEADD(dd,DATEDIFF(dd,0,@DateValue),0) AS DateOnly
-```
+{% endhighlight %}
 
 The `DATEADD` function adds some number of days (the 'dd' argument) to a known valid date (the integer value '0' in SQL maps to the date '1/1/1900'). The number of days that `DATEADD` adds to '1/1/1900' is determined by the result of the `DATEDIFF` function, which calculates the number of days that have elapsed since '1/1/1900'.
 
