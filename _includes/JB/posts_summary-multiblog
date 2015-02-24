@@ -23,6 +23,8 @@ Usage:
     {% assign posts_limit = 20 %}
   {% endunless %}
   
+  <h2>Recent Posts</h2>
+  
   <p>Showing the most recent {{ posts_limit }} posts{% if posts_category %} in category '{{posts_category}}'{% endif %}.</p>
 
   {% for post in posts_list limit: posts_limit %}
