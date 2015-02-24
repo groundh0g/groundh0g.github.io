@@ -46,7 +46,7 @@ SELECT CASE WHEN ROW_NUMBER() OVER (ORDER BY Caption) > 1
 
 Also note that the result of these queries is technically (malformed) XML, but can easily be converted to a string using something similar to the following query.
 
-```SQL
+{% highlight sql %}
 -- query [version 3]
 SELECT CAST((
   SELECT Caption + ','
@@ -54,6 +54,6 @@ SELECT CAST((
    ORDER BY Caption
      FOR XML Path('')
 ) AS varchar(255))
-```
+{% endhighlight %}
 
 > Written with [StackEdit](https://stackedit.io/).

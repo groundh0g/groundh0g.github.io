@@ -1,7 +1,7 @@
 ---
 layout: post
 categories: [GrowYourKnow]
-title: Concatenate Strings in TSQL
+title: Random Rows in TSQL
 tags : [tsql,code,how-to,tips,microsoft,sql-server]
 pagename: blog
 date: 2015-02-24 00:31:00 CDT
