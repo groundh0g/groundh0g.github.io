@@ -25,10 +25,10 @@ Usage:
   
   <h2>Recent Posts</h2>
   
-  <p>Showing the most recent {{ posts_limit }} posts{% if posts_category %} in category '{{posts_category}}'{% endif %}.</p>
+  <p>Showing the {{ posts_limit }} most recent posts{% if posts_category %} in category '{{posts_category}}'{% endif %}.</p>
 
   {% for post in posts_list limit: posts_limit %}
-    <h2>{{ post.title }}<br/><small>{{ post.date | date: "%B %e, %Y" }}</small></h2>
+    <h3>{{ post.title }}<br/><small>{{ post.date | date: "%B %e, %Y" }}</small></h3>
     <div style="margin-left:20px;">
   {% if multiblog_members.size == 1 %}
   	{% assign categories_list = othercats_members %}
