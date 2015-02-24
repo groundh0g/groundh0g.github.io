@@ -9,7 +9,7 @@ date: 2015-02-24 00:31:00 CDT
 
 Sometimes it can be useful to randomly select a value (or row) from a table. One easy way to do this is to sort the table using a column that contains random values, and then select the first row. The following query illustrates this concept.
 
-```SQL
+```
 -- initialize example data
 DECLARE @Data TABLE (Id int IDENTITY(1,1), Caption varchar(25))
 

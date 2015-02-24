@@ -15,7 +15,7 @@ If you compare the `LastSeenOn` column with a specific date, the comparison will
 
 With SQL Server 2008, it's easy to compare a pure date value (or a pure time value, although that’s typically not very useful). Just cast the `DATETIME` value to a `DATE`.
 
-```SQL
+```
 -- initialize example data
 DECLARE @DateValue datetime
 SET @DateValue = CAST(rand() * 45678 AS datetime)
