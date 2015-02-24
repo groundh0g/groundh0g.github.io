@@ -1,0 +1,57 @@
+{% if multiblog_members.size == 1 %}
+  {% assign target_category = multiblog_members[0] | downcase %}
+  {% assign filtered_tag_list = empty_array %}
+  {% assign filtered_tag_pages = empty_array %}
+  {% for tag in site.tags %}
+    {% assign temp_pages = empty_array %}
+	{% for pg in tag[1] %}
+	  {% if pg.categories contains target_category or target_category == "allsites" %}
+		{% if filtered_tag_list contains tag[0] %}
+		{% else %}
+		  {% assign filtered_tag_list = filtered_tag_list | push: tag[0] %}
+		{% endif %}
+	    {% assign temp_pages = temp_pages | push: pg %}
+	  {% endif %}
+	{% endfor %}
+	{% assign filtered_tag_pages = filtered_tag_pages | push: temp_pages %}
+  {% endfor %}
+{% else %}
+  {% assign filtered_tag_list = emptyArray %}
+  {% for tag in site.tags %}
+	{% assign filtered_tag_list = filtered_tag_list | push: tag[0] %}
+	{% assign filtered_tag_pages = filtered_tag_pages | push: tag[1] %}
+  {% endfor %}
+{% endif %}
+
+<ul class="tag_box inline">
+  {% assign count = filtered_tag_list.size | minus: 1 %}
+  {% for index in (0..count) %}
+    {% if multiblog_members.size == 1 %}
+      <li><a href="{{ BASE_PATH }}{{ site.blogs[multiblog_members[0]].tags_path }}#{{ filtered_tag_list[index] }}-ref">{{ filtered_tag_list[index] }} <span>{{ filtered_tag_pages[index].size }}</span></a></li>
+    {% else %}
+      <li><a href="{{ BASE_PATH }}{{ site.JB.tags_path }}#{{ filtered_tag_list[index] }}-ref">{{ filtered_tag_list[index] }} <span>{{ site.tags[filtered_tag_list[index]].pages.size }}</span></a></li>
+    {% endif %}
+  {% endfor %}
+</ul>
+
+{% assign count = filtered_tag_list.size | minus: 1 %}
+{% for index in (0..count) %}
+  <h2 id="{{ filtered_tag_list[index] }}-ref">{{ filtered_tag_list[index] }}</h2>
+  <ul>
+    {% if multiblog_members.size == 1 %}
+	  {% assign pages_list = filtered_tag_pages[index] %}
+    {% else %}
+	  {% assign pages_list = site.tags[filtered_tag_list[index]].pages %}
+    {% endif %}
+	{% include JB/pages_list %}
+  </ul>
+{% endfor %}
+
+{% if filtered_tag_list == nil or filtered_tag_list.size == 0 %}
+  <img src="{{ BASE_PATH }}/assets/img/iconBlog@2x.png" />
+{% endif %}
+
+
+{% assign filtered_tag_list = nil %}
+{% assign filtered_tag_pages = nil %}
+{% assign temp_pages = nil %}
