@@ -2,16 +2,17 @@
 {% assign othercats_members_string = "" %}
 
 {% for page_category in page.categories %}
-  {% if site.blogCategories contains page_category %}
+  {% assign page_cat = page_category | downcase %}
+  {% if site.blogCategories contains page_cat %}
   	{% if multiblog_members_string.size > 0 %}
       {% assign multiblog_members_string = multiblog_members_string | append: "/" %}
   	{% endif %}
-    {% assign multiblog_members_string = multiblog_members_string | append: page_category %}
+    {% assign multiblog_members_string = multiblog_members_string | append: page_cat %}
   {% else %}
   	{% if othercats_members_string.size > 0 %}
       {% assign othercats_members_string = othercats_members_string | append: "/" %}
   	{% endif %}
-    {% assign othercats_members_string = othercats_members_string | append: page_category %}
+    {% assign othercats_members_string = othercats_members_string | append: page_cat %}
   {% endif %}
 {% endfor %}
 

@@ -3,14 +3,14 @@
 permalink: /:categories/:year/:month/:day/:title 
 
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
-#highlighter: pygments
-highlighter: rouge
+highlighter: pygments
+#highlighter: rouge
 
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
 
-blogCategories: ["CodeCamps", "Codetopia", "Consigninator", "Fauxcabulary", "Flockkeeper", "GirlsAtPlay", "GrowYourKnow", "MoreOnCode", "AllSites"]
+blogCategories: ["codecamps", "codetopia", "consigninator", "fauxcabulary", "flockkeeper", "girlsatplay", "growyourknow", "moreoncode", "allsites"]
 excerpt_separator: ""
 
 title : More on Code
@@ -23,12 +23,12 @@ author :
   feedburner : feedname
 
 blogs: 
-    CodeCamps:
+    codecamps:
         title : Code Camps
         tagline: Game programming for teens.
         category: CodeCamps
-        commentsappid: 123
-        analyticsid: 'UA-123-12'
+        commentsappid: 548283078619119
+        analyticsid: 'UA-3294285-4'
         home_page: http://camps.moreoncode.com
         archive_path: /archive.codecamps.html
         categories_path : /categories.html
@@ -41,12 +41,12 @@ blogs:
           github : CodeCamps
           twitter : moreoncode
           feedburner : feedname
-    Codetopia:
+    codetopia:
         title : Codetopia, LLC
         tagline: Software Development Services
         category: Codetopia
-        commentsappid: 123
-        analyticsid: 'UA-123-12'
+        commentsappid: 659116600861462
+        analyticsid: 'UA-3294285-1'
         home_page: http://www.codetopia.com
         archive_path: /archive.codetopia.html
         categories_path : /categories.html
@@ -59,12 +59,12 @@ blogs:
           github : CodetopiaLLC
           twitter : codetopia
           feedburner : feedname
-    Consigninator:
+    consigninator:
         title : Consigninator
         tagline: Management Software for Consignments
         category: Consigninator
-        commentsappid: 123
-        analyticsid: 'UA-123-12'
+        commentsappid: 548283078619119
+        analyticsid: 'UA-3294285-4'
         home_page: http://www.consigninator.com
         archive_path: /archive.consigninator.html
         categories_path : /categories.html
@@ -77,12 +77,12 @@ blogs:
           github : Consigninator
           twitter : consigninator
           feedburner : feedname
-    Fauxcabulary:
+    fauxcabulary:
         title : Faucabulary.org
         tagline: Fake definitions. Real funny.
         category: Fauxcabulary
-        commentsappid: 123
-        analyticsid: 'UA-123-12'
+        commentsappid: 192808807437152
+        analyticsid: 'UA-3294285-3'
         home_page: http://www.fauxcabulary.org
         archive_path: /archive.fauxcabulary.html
         categories_path : /categories.html
@@ -95,12 +95,12 @@ blogs:
           github : groundh0g
           twitter : groundh0g
           feedburner : feedname
-    Flockkeeper:
+    flockkeeper:
         title : Flockkeeper
         tagline: Management Software for Non-Profits
         category: Flockkeeper
-        commentsappid: 123
-        analyticsid: 'UA-123-12'
+        commentsappid: 1420860638177334
+        analyticsid: 'UA-3294285-6'
         home_page: http://www.flockkeeper.com
         archive_path: /archive.flockkeeper.html
         categories_path : /categories.html
@@ -113,12 +113,12 @@ blogs:
           github : FlockKeeper
           twitter : flockkeeper
           feedburner : feedname
-    GirlsAtPlay:
+    girlsatplay:
         title : Girls at Play
         tagline: Projects from a dad and his three girls.
         category: GirlsAtPlay
-        commentsappid: 123
-        analyticsid: 'UA-123-12'
+        commentsappid: 299306950237660
+        analyticsid: 'UA-3294285-5'
         home_page: http://www.girlsatplay.com
         archive_path: /archive.girlsatplay.html
         categories_path : /categories.html
@@ -131,12 +131,12 @@ blogs:
           github : GirlsAtPlay
           twitter : girlzatplay
           feedburner : feedname
-    GrowYourKnow:
+    growyourknow:
         title : GrowYourKnow
         tagline: Projects from a dad and his three girls.
         category: GrowYourKnow
-        commentsappid: 123
-        analyticsid: 'UA-123-12'
+        commentsappid: 1545261172394228
+        analyticsid: 'UA-3294285-2'
         home_page: http://www.growyourknow.com
         archive_path: /archive.growyourknow.html
         categories_path : /categories.html
@@ -149,12 +149,12 @@ blogs:
           github : GrowYourKnow
           twitter : growyourknow
           feedburner : feedname
-    MoreOnCode:
+    moreoncode:
         title : More on Code
         tagline: var e = able; // TODO - it right
         category: MoreOnCode
-        commentsappid: 123
-        analyticsid: 'UA-123-12'
+        commentsappid: 548283078619119
+        analyticsid: 'UA-3294285-4'
         home_page: http://www.moreoncode.com
         archive_path: /archive.moreoncode.html
         categories_path : /categories.html
@@ -167,12 +167,12 @@ blogs:
           github : MoreOnCode
           twitter : moreoncode
           feedburner : feedname
-    AllSites:
+    allsites:
         title : All Sites
         tagline: Welcome to the Freak Show
         category: AllSites
-        commentsappid: 123
-        analyticsid: 'UA-123-12'
+        commentsappid: 548283078619119
+        analyticsid: 'UA-3294285-4'
         home_page: http://blogs.moreoncode.com
         archive_path: /archive.html
         categories_path : /categories.html
@@ -250,7 +250,7 @@ JB :
   # Set 'provider' to false to turn commenting off globally.
   #
   comments :
-    provider : null
+    provider : facebook
     disqus :
       short_name : jekyllbootstrap
     livefyre :

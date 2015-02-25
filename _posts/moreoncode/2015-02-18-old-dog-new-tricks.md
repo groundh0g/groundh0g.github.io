@@ -6,9 +6,11 @@ tags : [news,work,thoughtworks]
 pagename: blog
 date: 2015-02-18 05:30:00 CDT
 ---
-{% include JB/setup %}
 
-> Next chapter of my life starts late March. Joining @thoughtworks #Atlanta team. 25 in the industry, but I'll be a newbie again. Can't wait!
+> Next chapter of my life starts late March. Joining @thoughtworks #Atlanta team. 
+>
+> 25 years in the industry, but I'll be a newbie again. Can't wait!
+>
 > -- @groundh0g
 
 The last 25 years have been a wild ride. I’ve both worked for big name companies and played the role of a big fish in small ponds. That time has afforded me the opportunity to work across the nation as I developed my skills, and to return to my Montgomery roots once I started adding rug rats to the mix.
