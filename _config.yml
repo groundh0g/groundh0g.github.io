@@ -16,11 +16,12 @@ excerpt_separator: ""
 title : More on Code
 tagline: var e = able; // TODO - it right
 author :
-  name : Joseph Hall
+  name : More on Code
   email : hello@moreoncode.com
-  github : groundh0g
-  twitter : groundh0g
+  github : MoreOnCode
+  twitter : MoreOnCode
   feedburner : feedname
+  bio: var e = able; // TODO - it right
 
 blogs: 
     codecamps:
@@ -41,6 +42,7 @@ blogs:
           github : CodeCamps
           twitter : moreoncode
           feedburner : feedname
+          bio: Game programming for teens.
     codetopia:
         title : Codetopia, LLC
         tagline: Software Development Services
@@ -59,6 +61,7 @@ blogs:
           github : CodetopiaLLC
           twitter : codetopia
           feedburner : feedname
+          bio: Software development services.
     consigninator:
         title : Consigninator
         tagline: Management Software for Consignments
@@ -77,6 +80,7 @@ blogs:
           github : Consigninator
           twitter : consigninator
           feedburner : feedname
+          bio: Management software for consignments.
     fauxcabulary:
         title : Faucabulary.org
         tagline: Fake definitions. Real funny.
@@ -95,6 +99,7 @@ blogs:
           github : groundh0g
           twitter : groundh0g
           feedburner : feedname
+          bio: Fake definitions. Real funny.
     flockkeeper:
         title : Flockkeeper
         tagline: Management Software for Non-Profits
@@ -113,6 +118,7 @@ blogs:
           github : FlockKeeper
           twitter : flockkeeper
           feedburner : feedname
+          bio: Management software for non-profits.
     girlsatplay:
         title : Girls at Play
         tagline: Projects from a dad and his three girls.
@@ -131,9 +137,10 @@ blogs:
           github : GirlsAtPlay
           twitter : girlzatplay
           feedburner : feedname
+          bio: Projects from a dad and his three girls.
     growyourknow:
         title : GrowYourKnow
-        tagline: Projects from a dad and his three girls.
+        tagline: Something witty goes here.
         category: GrowYourKnow
         commentsappid: 1545261172394228
         analyticsid: 'UA-3294285-2'
@@ -149,6 +156,7 @@ blogs:
           github : GrowYourKnow
           twitter : growyourknow
           feedburner : feedname
+          bio: Intended to (one of these days) be a tutoring tool for all kids (including homeschoolers), with tracking, stats, and reports for parents.
     moreoncode:
         title : More on Code
         tagline: var e = able; // TODO - it right
@@ -167,6 +175,7 @@ blogs:
           github : MoreOnCode
           twitter : moreoncode
           feedburner : feedname
+          bio: var e = able; // TODO - it right
     allsites:
         title : All Sites
         tagline: Welcome to the Freak Show
@@ -185,6 +194,7 @@ blogs:
           github : groundh0g
           twitter : groundh0g
           feedburner : feedname
+          tagline: Welcome to the freak show.
     
 
 # The production_url is only used when full-domain names are needed

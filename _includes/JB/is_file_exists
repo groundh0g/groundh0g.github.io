@@ -1,0 +1,14 @@
+{% comment %}<!--
+  param:  check_file = '/example/file.png'
+  return: is_file_exists = true
+-->{% endcomment %}
+
+{% assign is_file_exists = false %}
+
+{% if check_file %}
+	{% for static_file in site.static_files %}
+		{% if is_file_exists == false and static_file.path == check_file %}
+			{% assign is_file_exists = true %}
+		{% endif %}
+	{% endfor %}
+{% endif %}

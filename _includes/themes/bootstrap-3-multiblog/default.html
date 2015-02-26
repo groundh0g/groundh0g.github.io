@@ -118,7 +118,62 @@
       </nav>
 
       <div class="container">
-        {{ content }}
+
+		{% if page.author %}
+		  {% assign blogkey = page.author | downcase %}
+		{% else if multiblog_members.first %}
+		  {% assign blogkey = multiblog_members.first | downcase %}
+		{% else %}
+		  {% assign blogkey = nil %}
+		{% endif %}
+
+		{% if blogkey %}
+			{% assign bio_image = site.blogs[blogkey].category | downcase %}
+			{% assign bio_title = site.blogs[blogkey].title %}
+			{% assign bio_text = site.blogs[blogkey].author.bio %}
+			{% assign bio_twitter = site.blogs[blogkey].author.twitter %}
+			{% assign bio_github = site.blogs[blogkey].author.github %}
+			{% assign bio_email = site.blogs[blogkey].author.email %}
+			{% assign bio_homepage = site.blogs[blogkey].home_page %}
+			<div class="bio" style="float:left; width:225px;">
+			  {%if bio_title %}
+			    {% assign check_file_root = "/assets/img/authors/avatars/" | append: bio_image %}
+			    {% assign check_file =  check_file_root | append: "_400x400.png" %}
+			    {% include JB/is_file_exists %}
+			    {% if is_file_exists %}
+				  <div class="bio-avatar"><img src="{{check_file}}" width="200" height="200" border="0" /></div>
+			    {% else %}
+			      {% assign check_file =  check_file_root | append: "_200x200.png" %}
+			      {% include JB/is_file_exists %}
+			      {% if is_file_exists %}
+				    <div class="bio-avatar"><img src="{{check_file}}" width="200" height="200" border="0" /></div>
+				  {% endif %}
+			    {% endif %}
+				<div class="bio-title" style="font-size:2em; font-weight:bold;">{{ bio_title }}</div>
+			  {% endif %}
+			  {%if bio_text %}
+				<div class="bio-text">{{ bio_text }}</div>
+			  {% endif %}
+			  <div class="bio-contact">
+				  {%if bio_homepage %}
+					<div><i class="icon icon-link"></i><a href="{{ bio_homepage }}">{{ bio_homepage }}</a></div>
+				  {% endif %}
+				  {%if bio_twitter %}
+					<div><i class="icon icon-twitter"></i><a href="http://twitter.com/{{ bio_twitter }}">@{{ bio_twitter }}</a></div>
+				  {% endif %}
+				  {%if bio_github %}
+					<div><i class="icon icon-github"></i><a href="http://github.com/{{ bio_github }}">{{ bio_github }}</a></div>
+				  {% endif %}
+				  {%if bio_email %}
+					<div><i class="icon icon-email"></i><a href="mailto:{{ bio_email }}">{{ bio_email }}</a></div>
+				  {% endif %}
+			  </div>
+			</div>
+			<div style="margin-left:250px;">{{ content }}</div>
+		{% else %}
+			{{ content }}
+		{% endif %}
+
       </div>
 
     </div>
