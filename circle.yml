@@ -1,6 +1,8 @@
 checkout:
   post:
     - NOW=$(date +"%b %d %Y")
+    - date
+    - date +"%b %d %Y"
     - echo \<span id=\"buildDate\"\>$NOW\</span\> > updated.html
     - echo \<span id=\"buildDate\"\>$NOW\</span\>
     - git add updated.html
