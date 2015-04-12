@@ -2,11 +2,12 @@ checkout:
   post:
     - NOW=$(date +"%b %d %Y")
     - echo \<span id=\"buildDate\"\>$NOW\</span\> > updated.html
+    - echo \<span id=\"buildDate\"\>$NOW\</span\>
     - git add updated.html
 test:
   override:
     - git config user.name "groundh0g"
     - git config user.email "joehall@codetopia.com"
-    - git commit -m "Updating build date from CI."
-    - git push
+    - echo $(git commit -m "Updating build date from CI.")
+    - echo $(git push)
     - php -v
