@@ -1,0 +1,10 @@
+checkout:
+  post:
+    - NOW=$(date +"%b %d %Y")
+    - echo \<span id=\"buildDate\"\>$NOW\</span\> > updated.html
+    - git add updated.html
+test:
+  override:
+    - git commit -m "Updating build date from CI."
+    - git push
+    - php -v
