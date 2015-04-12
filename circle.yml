@@ -5,6 +5,7 @@ checkout:
     - git add updated.html
 test:
   override:
+    - git config user.email "joehall@codetopia.com"
     - git commit -m "Updating build date from CI."
     - git push
     - php -v
