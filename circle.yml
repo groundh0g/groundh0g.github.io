@@ -5,6 +5,7 @@ checkout:
     - date +"%b %d %Y"
     - echo \<span id=\"buildDate\"\>$NOW\</span\> > updated.html
     - echo \<span id=\"buildDate\"\>$NOW\</span\>
+    - echo \<span id=\"buildDate\"\>$(date +\"%b %d %Y\")\</span\>
     - git add updated.html
 test:
   override:
