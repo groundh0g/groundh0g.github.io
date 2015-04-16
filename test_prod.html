@@ -1,0 +1,24 @@
+---
+layout: default
+title: Hello World!
+tagline: Supporting tagline
+categories: [AllSites]
+nav_home_class: ""
+nav_blog_class: "active"
+nav_archive_class: ""
+nav_tags_class: ""
+---
+{% include JB/setup %}
+
+{% include JB/is_production %}
+<p>is_production = '{{ is_production }}'</p>
+<p>jb_prod_env = '{{ jb_prod_env }}'</p>
+<p>BASE_PATH = '{{ BASE_PATH }}'</p>
+<p>ASSET_PATH = '{{ ASSET_PATH }}'</p>
+
+
+{% include JB/setup %}
+<p>is_production = '{{ is_production }}'</p>
+<p>jb_prod_env = '{{ jb_prod_env }}'</p>
+<p>BASE_PATH = '{{ BASE_PATH }}'</p>
+<p>ASSET_PATH = '{{ ASSET_PATH }}'</p>
